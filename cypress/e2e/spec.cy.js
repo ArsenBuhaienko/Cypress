@@ -1,4 +1,6 @@
 import 'cypress-xpath';
+import {PageObject} from "../e2e/pom/PageObject.js"
+
 describe('DemoQA', () => {
   beforeEach(() => {
     cy.visit('https://demoqa.com')
@@ -21,5 +23,11 @@ describe('DemoQA', () => {
   it('Open interactions page', () => {
     cy.xpath('(//div[@class="avatar mx-auto white"])[5]').click();
   })
+
+
+   it('Using POM', () => {
+    PageObject.navigateToFormsPage()
+  })
+
   
 })
